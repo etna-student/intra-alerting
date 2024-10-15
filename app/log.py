@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(
+logging_config = logging.basicConfig(
     filename='output.txt',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',

@@ -1,9 +1,10 @@
 import requests
 
-from config.env import dotenv
 
+from env import get_dotenv
 
 def authenticate(auth_url):
+    dotenv = get_dotenv()
     login = dotenv['login']
     password = dotenv['password']
 
