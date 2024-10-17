@@ -1,10 +1,6 @@
-import requests
+import config.env as env
+from app.req.google_chat import send_notification_to_google_chat
+from constants.webhooks import webhooks
 
-GOOGLE_CHAT_WEBHOOK_URL=''
-
-def send_notification_to_google_chat(message):
-    data = {"text": message}
-    requests.post(GOOGLE_CHAT_WEBHOOK_URL, json=data)
-
-send_notification_to_google_chat('test')
-
+url = webhooks['google_chat_webhook_url']
+send_notification_to_google_chat(url, 'test')
